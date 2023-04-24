@@ -1,0 +1,11 @@
+---
+import NavigationLink from "./NavigationLink.astro";
+
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.split("/");
+---
+
+<NavigationLink title="Home" url="" currentpath={currentPath[1]} />
+<NavigationLink title="About" url="about" currentpath={currentPath[1]} />
+<NavigationLink title="Uses" url="uses" currentpath={currentPath[1]} />
+<NavigationLink title="Blog" url="blog" currentpath={currentPath[1]} />
