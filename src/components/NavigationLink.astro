@@ -6,11 +6,11 @@ const { title, url, currentpath } = Astro.props;
   {title}
   {
     currentpath === url ? (
-      <span class="inline-block w-full h-[1px] bg-dark absolute left-0 -bottom-1">
+      <span class="inline-block w-full h-[1px] bg-dark dark:bg-light absolute left-0 -bottom-1">
         &nbsp;
       </span>
     ) : (
-      <span class="inline-block w-0 h-[1px] bg-dark absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300">
+      <span class="inline-block w-0 h-[1px] bg-dark dark:bg-light absolute left-0 -bottom-1 group-hover:w-full transition-[width] ease duration-300">
         &nbsp;
       </span>
     )
