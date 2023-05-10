@@ -4,9 +4,10 @@ import NavigationSocialBar from "../components/NavigationSocialBar.astro";
 
 export interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
@@ -27,7 +29,7 @@ const { title } = Astro.props;
           <NavigationSocialBar />
         </nav>
       </header>
-      <article>
+      <article class="text-2xl px-4 py-8">
         <slot />
       </article>
       <footer></footer>
@@ -35,4 +37,6 @@ const { title } = Astro.props;
     <script src="../js/app.js"></script>
   </body>
 </html>
-<style is:global></style>
+<style is:global>
+  @import "../styles/base.css";
+</style>

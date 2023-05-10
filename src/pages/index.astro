@@ -1,7 +1,47 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import Button from "../components/Button.astro";
+
+import devguy from "../images/developer-guy.png";
 ---
 
-<Layout title="Welcome to Astro.">
-  <h1 class="text-6xl">Startseite</h1>
+<Layout title="Startseite" description="Das ist meine Startseite">
+  <div class="flex flex-row justify-between items-center">
+    <div class="w-1/2 flex justify-center items-center py-10">
+      <Image
+        src={devguy}
+        width={1200}
+        height={1100}
+        quality={80}
+        format="webp"
+        alt="Das bin ich"
+      />
+    </div>
+    <div class="w-1/2 flex flex-col justify-between items-start">
+      <div class="text-6xl mb-4">
+        Visionen mit<br />
+        Code und <span class="text-blue-700 dark:text-green-400">Design</span
+        ><br />
+        zum Leben erwecken
+      </div>
+      <div class="mb-6 leading-relaxed">
+        Du wolltest schon immer wissen wie du eine Website programmierst? Ich
+        zeige dir in zahlreichen Tutorials wie du das mit HTML, CSS und
+        JavaScript am besten machst.
+      </div>
+      <div class="flex items-center">
+        <Button
+          url="https://www.youtube.com/@ProgrammierenMario/videos"
+          title="Tutorials"
+          external={true}
+        />
+        <a
+          href="mailto:support@email.de"
+          class="ml-8 font-medium text-dark dark:text-light underline"
+          >Kontakt
+        </a>
+      </div>
+    </div>
+  </div>
 </Layout>

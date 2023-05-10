@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply inline-block text-6xl mb-8;
+  }
+
+  h2,
+  h3 {
+    @apply inline-block text-4xl my-8;
+  }
+
+  h1::before,
+  h2::before,
+  h3::before {
+    @apply inline-block mr-4 text-blue-700 dark:text-green-400;
+    content: "#";
+  }
+
+  p {
+    @apply my-4 leading-relaxed;
+  }
+
+  h1 + p {
+    @apply first-letter:text-6xl first-letter:font-bold;
+  }
+
+  p > a {
+    @apply text-blue-700 dark:text-green-400 hover:underline;
+  }
+}
