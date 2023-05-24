@@ -1,7 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import { sortByDate } from "../utils/sortByDate.js";
+
+import { getCollection } from "astro:content";
+const blogEntries = await getCollection("blog", ({ data }) => {
+  return data.draft !== true;
+});
 ---
 
 <Layout title="Welcome to Astro.">
-  <h1 class="text-6xl">Blog</h1>
+  <h1 id="blog">Blog</h1>
+  <p>
+    Neben meinen Tutorials auf YouTube möchte ich auch einen kleinen Blog
+    starten. Ich hoffe, dass ihr etwas davon habt. Ich werde versuchen,
+    regelmäßig neue Artikel zu veröffentlichen. Rechtschreibfehler gehören zu
+    meinem Schreibstil und fallen unter Dialekt.
+  </p>
+
+  <h2 id="article">Die neusten Artikel</h2>
+  <div class="grid grid-cols-4 gap-4 mb-8">
+    {
+      blogEntries
+        .sort(sortByDate)
+        .slice(0, 3)
+        .map((blogPostEntry) => (
+          <div class="border-2 border-dark dark:border-light p-2 rounded-xl">
+            <a href={`/blog/${blogPostEntry.slug}`}>
+              <Image
+                src={blogPostEntry.data.image.src}
+                width={600}
+                height={450}
+                quality={80}
+                format="webp"
+                class="rounded-md"
+                alt={blogPostEntry.data.image.alt}
+              />
+            </a>
+            <a href={`/blog/${blogPostEntry.slug}`}>
+              <div class="px-2 py-4">{blogPostEntry.data.title}</div>
+            </a>
+            <div class="text-base px-2 pb-2">
+              {blogPostEntry.data.description}
+            </div>
+          </div>
+        ))
+    }
+  </div>
 </Layout>

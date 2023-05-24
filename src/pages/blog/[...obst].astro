@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { obst: "banane" } },
+    { params: { obst: "apfel" } },
+    { params: { obst: "obst/kirsche" } },
+  ];
+}
+
+const { obst } = Astro.params;
+---
+
+<Layout title={obst}>
+  <h1>{obst}!</h1>
+</Layout>

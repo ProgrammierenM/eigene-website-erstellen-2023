@@ -1,0 +1,242 @@
+---
+draft: false
+layout: ../../layouts/BlogLayout.astro
+publishedDate: 2023-04-07
+updatedDate: 2023-04-08
+author: Mad Max
+title: Welche VS Code Plugins ich verwende
+description: Eine Liste welche Plugins ich persönlich für VS Code am liebsten verwende.
+keywords: [VS Code, Plugins, Erweiterungen, Extensions, Visual Studio Code]
+image:
+  src: /images/blog/vs-code-extensions.png
+  alt: Visual Studio Code Extensions
+---
+
+import { Image } from "@astrojs/image/components";
+import Button from "../../components/Button.astro";
+
+# Welche VS Code Plugins ich verwende
+
+Visual Studio Code ist eines der beliebtesten Code Editoren und das nicht ohne Grund. Es ist kostenlos, Open Source und hat eine große Community. Ich verwende VS Code seit einigen Jahren und habe in der Zeit einige Plugins entdeckt, die ich nicht mehr missen möchte. In diesem Artikel möchte ich euch meine Favoriten vorstellen.
+
+<div id="toc">
+
+<Image
+  src={frontmatter.image.src}
+  width={1200}
+  height={900}
+  quality={80}
+  format="webp"
+  class="rounded-xl"
+  alt={frontmatter.image.alt}
+/>
+
+- [Welche VS Code Plugins ich verwende](#welche-vs-code-plugins-ich-verwende)
+  - [Astro](#astro)
+  - [Auto Rename Tag](#auto-rename-tag)
+  - [Comment Anchors](#comment-anchors)
+  - [Git Graph](#git-graph)
+  - [GitHub Copilot](#github-copilot)
+  - [Inline HTML](#inline-html)
+  - [Live Server](#live-server)
+  - [Markdown All in One](#markdown-all-in-one)
+  - [Marp for VS Code](#marp-for-vs-code)
+  - [Material Icon Theme](#material-icon-theme)
+  - [Mayukai Theme](#mayukai-theme)
+  - [Prettier - Code formatter](#prettier---code-formatter)
+  - [SASS](#sass)
+  - [Tailwind CSS IntelliSense](#tailwind-css-intellisense)
+  - [SQLite](#sqlite)
+  - [Template String Converter](#template-string-converter)
+  - [Thunder Client](#thunder-client)
+  - [WSL](#wsl)
+  - [Fazit](#fazit)
+
+</div>
+
+## Astro
+
+Astro ist ein All-In-One Web Framework für Content orientierte Websites. Ich verwende es für meine Website und bin sehr zufrieden damit. Das Plugin bietet Syntax Highlighting, Snippets und vieles mehr. Ein Muss für Entwickler die Astro verwenden.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode"
+  title="Download"
+  external={true}
+/>
+
+## Auto Rename Tag
+
+Auto Rename Tag ist ein sehr nützliches Plugin, das es ermöglicht, Tags automatisch zu ändern. Wenn ich zum Beispiel ein `<div>` Tag zu einem `<p>` Tag ändere, wird das schließende Tag automatisch mit geändert.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag"
+  title="Download"
+  external={true}
+/>
+
+## Comment Anchors
+
+Comment Anchors ist ein Plugin, das es ermöglicht,
+Kommentare mit einem Link zu versehen. Wenn ich zum Beispiel einen Kommentar
+schreibe, kann ich diesen mit einem Link versehen, der mich direkt zum Kommentar
+führt. Alle Links werden in einem Panel gesammelt, das über die Sidebar erreichbar ist.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=ExodiusStudios.comment-anchors"
+  title="Download"
+  external={true}
+/>
+
+## Git Graph
+
+Diese Erweiterung ermöglicht es, den Git Graphen direkt in VS Code anzuzeigen. Ich verwende es, um einen Überblick über meine Commits zu behalten und um zu sehen, welche Branches ich habe und wie diese verlaufen.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph"
+  title="Download"
+  external={true}
+/>
+
+## GitHub Copilot
+
+Copilot macht Vorschläge für Code, die auf künstlicher Intelligenz basieren. Ich verwende es, um mir Code Snippets zu generieren, die ich dann in meine Projekte einfügen kann. Es ist ein sehr nützliches Plugin, das mir viel Zeit spart. Gerade die Context bezogenen Vorschläge, die auf dem Code basieren, den ich gerade schreibe sind sehr zeitsparend.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot"
+  title="Download"
+  external={true}
+/>
+
+## Inline HTML
+
+Mit Inline HTML erhälst du Syntax Highlighting für HTML in JavaScript Dateien. Wenn du HTML Code mit JavaScript erzeugst oder einfach Templates in JavaScript verwendest, ist dieses kostenlose Plugin auf jeden Fall sein Geld wert 😁.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=pushqrdx.inline-html"
+  title="Download"
+  external={true}
+/>
+
+## Live Server
+
+Die bekannteste VS Code Erweiterung würde ich vermuten. Es ermöglicht eine lokale Entwicklungsumgebung zu erstellen. Es ist sehr nützlich, wenn du eine Website entwickelst und diese lokal testen möchtest. Es ist sehr einfach zu bedienen und bietet viele nützliche Funktionen.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"
+  title="Download"
+  external={true}
+/>
+
+## Markdown All in One
+
+Wenn du Markdown Dateien erstellst und bearbeitest dann ist diese Erweiterung Pflicht. Es bietet viele nützliche Funktionen wie zum Beispiel das automatische Erstellen von Überschriften, das automatische Erstellen von Links, TOC und vieles mehr.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one"
+  title="Download"
+  external={true}
+/>
+
+## Marp for VS Code
+
+Marp ist ein Markdown Präsentationsframework. Präsentationen mit Markdown zu erstellen, wenn das dein Traum ist, dann bist du hiermit bestens bedient. Mit wenigen Handgriffen kannst du bereits exisierende Markdown Dateien zu einer Präsentation machen. Das beste Feature ist der Export mit dem du eine HTML Präsentation erstellen kannst.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
+  title="Download"
+  external={true}
+/>
+
+## Material Icon Theme
+
+Material Icon Theme ist ein Icon Theme für VS Code. Es bietet viele Icons für verschiedene Dateitypen und Verzeichnisse. Es ist sehr nützlich, wenn du viele verschiedene Dateitypen in deinem Projekt hast und diese schnell unterscheiden möchtest.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"
+  title="Download"
+  external={true}
+/>
+
+## Mayukai Theme
+
+Mayukai Theme ist ein Theme für VS Code. Es ist ein sehr schönes Theme, das ich sehr gerne verwende. Es ist für mich persönlich sehr angenehm für die Augen. 8+ Stunden mit VS Code sind damit kein Problem mehr 😅.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=GulajavaMinistudio.mayukaithemevsc"
+  title="Download"
+  external={true}
+/>
+
+## Prettier - Code formatter
+
+Prettier ist ein Code Formatter, der es ermöglicht, den Code automatisch zu formatieren. Es ist auch sehr nützlich, wenn du mit mehreren Entwicklern an einem Projekt arbeitest damit nicht jeder seinen eigenen Code Style hat. Mit Prettier kannst du deinen Code automatisch formatieren und so sicherstellen, dass der Code immer gleich aussieht.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+  title="Download"
+  external={true}
+/>
+
+## SASS
+
+SASS ist eine Erweiterung für VS Code, die es ermöglicht, SASS Dateien zu bearbeiten. Es bietet Syntax Highlighting, Code Snippets und vieles mehr. Wenn du SASS verwendest, dann ist diese Erweiterung ein Muss.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented"
+  title="Download"
+  external={true}
+/>
+
+## Tailwind CSS IntelliSense
+
+Tailwind CSS IntelliSense ermöglicht, Tailwind CSS Klassen automatisch zu vervollständigen. Es ist sehr nützlich, wenn du Tailwind CSS verwendest und dir die Klassen nicht merken kannst. Es bietet auch eine Vorschau für die Klassen, die du verwenden möchtest. Cool ist das in dieser Vorschau auch die Farben angezeigt werden und welche CSS Properties du damit verwendest.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+  title="Download"
+  external={true}
+/>
+
+## SQLite
+
+Mit SQLite kannst du SQLite Datenbanken direkt in VS Code öffnen und anschauen.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite"
+  title="Download"
+  external={true}
+/>
+
+## Template String Converter
+
+Der Template String Converter wandelt automatisch eine Zeichenkette in ein Template String um wenn du JavaScript Variablen darin verwendest. Sehr nützlich wenn du nicht jedes mal von Hand die Quotes ändern möchtest. Kleiner Helfer aber Ohooo 😁.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=meganrogge.template-string-converter"
+  title="Download"
+  external={true}
+/>
+
+## Thunder Client
+
+Wenn du mit REST APIs arbeitest, dann ist Thunder Client ein Muss. Es ermöglicht, HTTP Requests direkt in VS Code zu erstellen und auszuführen. Es bietet viele nützliche Funktionen wie zum Beispiel das Speichern von Requests, das Speichern von Environments und vieles mehr.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
+  title="Download"
+  external={true}
+/>
+
+## WSL
+
+Windows Subsystem for Linux ermöglicht es, Linux Distributionen direkt in Windows zu verwenden. Ich verwende es, um meine Projekte in einer Linux Distribution Ubunutu zu entwickeln. Wenn du mit Docker arbeitest und die Docker Container direkt in Linux laufen lassen möchtest oder wenn du mit Node.js arbeitest und die Node.js Versionen direkt in Linux verwenden möchtest, dann kann ich diese Erweiterung nur empfehlen. Du Entwickelst direkt unter Linux, die grafische Oberfläche von VS Code wird aber von Windows gerendert. Das beste aus beiden Welten.
+
+<Button
+  url="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl"
+  title="Download"
+  external={true}
+/>
+
+## Fazit
+
+Das waren meine Favoriten. Ich hoffe, dass ich dir ein paar nützliche Plugins vorstellen konnte. Wenn du noch weitere Plugins kennst, die ich unbedingt ausprobieren sollte, dann schreib mir doch gerne auf Twitter oder schreib mir einen Kommentar auf YouTube.

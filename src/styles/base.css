@@ -4,18 +4,18 @@
 
 @layer base {
   h1 {
-    @apply inline-block text-6xl mb-8;
+    @apply text-4xl md:text-6xl mb-6 md:mb-12;
   }
 
   h2,
   h3 {
-    @apply inline-block text-4xl my-8;
+    @apply text-2xl md:text-4xl my-6 md:my-12;
   }
 
   h1::before,
   h2::before,
   h3::before {
-    @apply inline-block mr-4 text-blue-700 dark:text-green-400;
+    @apply mr-4 text-blue-700 dark:text-green-400;
     content: "#";
   }
 
@@ -27,7 +27,32 @@
     @apply first-letter:text-6xl first-letter:font-bold;
   }
 
-  p > a {
+  pre {
+    @apply text-lg md:text-xl rounded-lg my-8 p-3;
+  }
+
+  #toc {
+    @apply xl:float-right xl:w-1/2 xl:ml-8;
+  }
+
+  #toc > ul {
+    @apply border-2 border-dark dark:border-light rounded-xl my-8 py-2 px-4 text-lg md:text-xl;
+  }
+
+  #toc li {
+    @apply my-2 list-disc;
+  }
+
+  p > a,
+  li > a {
     @apply text-blue-700 dark:text-green-400 hover:underline;
+  }
+
+  p > code {
+    @apply bg-blue-700 dark:bg-green-400 text-light dark:text-dark rounded-lg px-2 whitespace-nowrap;
+  }
+
+  li {
+    @apply my-2 mx-4;
   }
 }

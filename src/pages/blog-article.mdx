@@ -1,0 +1,63 @@
+---
+draft: true
+layout: ../layouts/Layout.astro
+pubishedDate: 2023-05-22
+updatedDate: 2023-05-25
+author: Mad Max
+title: Das ist ein Test Artikel
+description: Eine schöne Beschreibung für den Artikel mit vielen Wörtern
+keywords: [Test, Artikel, Blog]
+image:
+  src: /images/blog/vs-code-extensions.png
+  alt: Das ist ein Test Bild
+---
+
+import { Image } from "@astrojs/image/components";
+import Button from "../components/Button.astro";
+
+# Überschrift
+
+lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet
+
+<div id="toc">
+
+<Image
+  src={frontmatter.image.src}
+  width={1200}
+  height={900}
+  quality={80}
+  format="webp"
+  class="rounded-xl"
+  alt={frontmatter.image.alt}
+/>
+
+- [Überschrift](#überschrift)
+  - [Überschrift 2](#überschrift-2)
+  - [Überschrift 3](#überschrift-3)
+  - [Überschrift 4](#überschrift-4)
+
+</div>
+
+## Überschrift 2
+
+lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet
+
+<Button
+  url="https://www.youtube.com/@ProgrammierenMario/videos"
+  title="Tutorials"
+  external={true}
+/>
+
+## Überschrift 3
+
+lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet
+
+```js
+function test() {
+  console.log("Hallo Welt");
+}
+```
+
+## Überschrift 4
+
+lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren no sea takimata sanctus est lorem ipsum dolor sit amet
