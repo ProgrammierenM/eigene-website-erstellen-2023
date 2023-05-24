@@ -1,12 +1,17 @@
 ---
 import { Icon } from "astro-icon";
 
+// Mit interface Props können wir die Props von Astro in TypeScript definieren.
+// Hier legst du fest welche Props diese Komponente erwartet und welche Typen sie haben sollen.
 export interface Props {
   url: string;
   title: string;
+  // ? bedeutet, dass die Prop optional ist.
   external?: boolean;
 }
 
+// Astro.props ist ein Objekt, das alle Props von Astro enthält.
+// Es werden props angegeben welche in der Komponente verwendet werden sollen.
 const { url, title, external } = Astro.props;
 ---
 

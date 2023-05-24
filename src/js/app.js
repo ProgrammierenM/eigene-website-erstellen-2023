@@ -1,12 +1,19 @@
+// pageHandler ist die Klasse, die alle Funktionen enthält, die auf der Seite ausgeführt werden sollen.
 class PageHandler {
+  // der Konstruktor wird beim Erstellen einer neuen Instanz der Klasse ausgeführt.
   constructor() {
+    // Hier werden alle Funktionen aufgerufen, die beim Laden der Seite ausgeführt werden sollen.
+    // Wenn im localStorage der Wert "theme" auf "dark" gesetzt ist, wird der Klasse "dark" auf dem HTML-Element hinzugefügt.
     if (localStorage.getItem("theme") == "dark") {
       document.documentElement.classList.add("dark");
     }
 
+    // Initiale Funktionen welche beim Laden der Seite ausgeführt werden sollen.
     this.setThemeIcon();
     this.typeWriterManager();
 
+    // Event-Listener für den Dark-Mode-Switch
+    // Bei Klick auf den Switch wird die Klasse "dark" auf dem HTML-Element hinzugefügt oder entfernt.
     document.querySelector("#colorSwitch").addEventListener("click", () => {
       document.documentElement.classList.toggle("dark");
 
@@ -20,6 +27,7 @@ class PageHandler {
     });
   }
 
+  // Diese Funktion setzt das Icon für den Dark-Mode-Switch.
   setThemeIcon() {
     let colorSwitch = document.querySelector("#colorSwitch");
     if (colorSwitch === null) return;
@@ -35,6 +43,8 @@ class PageHandler {
     }
   }
 
+  // Diese Funktion verwaltet einen Typewriter-Effekt für ein beliebiges Element.
+  // Es werden die Wörter aus dem Array "dynamicHeaderTextArray" nacheinander in das Element geschrieben.
   typeWriterManager() {
     let dynamicHeaderElement = document.querySelector("#dynamic-header-text");
     if (dynamicHeaderElement === null) return;
@@ -45,6 +55,9 @@ class PageHandler {
     let currentWord = dynamicHeaderTextArray[i];
     let isDeleting = false;
 
+    // Diese Funktion schreibt die Wörter aus dem Array "dynamicHeaderTextArray" nacheinander in das Element oder löscht sie wieder.
+    // Nach jedem Durchlauf wird die Funktion erneut aufgerufen. Bei einem Durchlauf wird ein Buchstabe hinzugefügt oder gelöscht.
+    // Je nach Situation wird die Funktion nach einem bestimmten Timeout erneut aufgerufen.
     let typeWriter = () => {
       currentWord = dynamicHeaderTextArray[i];
 
@@ -79,8 +92,10 @@ class PageHandler {
   }
 }
 
+// Diese Funktion erstellt eine neue Instanz der Klasse PageHandler.
 const init = () => {
   new PageHandler();
 };
 
+// Die Funktion init() wird ausgeführt, wenn der DOM geladen wurde.
 document.addEventListener("DOMContentLoaded", () => init());
