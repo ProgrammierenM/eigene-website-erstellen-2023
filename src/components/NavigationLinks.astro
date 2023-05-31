@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 import NavigationLink from "./NavigationLink.astro";
 
 const pathname = new URL(Astro.request.url).pathname;
@@ -9,3 +10,12 @@ const currentPath = pathname.split("/");
 <NavigationLink title="About" url="about" currentpath={currentPath[1]} />
 <NavigationLink title="Uses" url="uses" currentpath={currentPath[1]} />
 <NavigationLink title="Blog" url="blog" currentpath={currentPath[1]} />
+{
+  currentPath[1] === "blog" && currentPath[2] ? (
+    <a href="#toc" class="block md:hidden">
+      <Icon name="mdi:toc" width="32" height="32" class="ml-2" />
+    </a>
+  ) : (
+    ""
+  )
+}

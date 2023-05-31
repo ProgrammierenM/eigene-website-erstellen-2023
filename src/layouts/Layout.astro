@@ -1,6 +1,7 @@
 ---
-import NavigationLinks from "../components/NavigationLinks.astro";
-import NavigationSocialBar from "../components/NavigationSocialBar.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import NavigationMobile from "../components/NavigationMobile.astro";
 
 const { title, description } = Astro.props;
 ---
@@ -15,19 +16,13 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="font-mono bg-light dark:bg-dark text-dark dark:text-light">
-    <main class="md:container md:mx-auto w-full min-h-screen">
-      <header class="flex items-center justify-between px-4 py-8 font-medium">
-        <nav class="flex items-center justify-center gap-x-8 text-2xl">
-          <NavigationLinks />
-        </nav>
-        <nav class="flex items-center justify-center gap-x-5">
-          <NavigationSocialBar />
-        </nav>
-      </header>
-      <article class="text-2xl px-4 py-8">
+    <main class="relative md:container md:mx-auto w-full min-h-screen">
+      <Header />
+      <article class="text-lg md:text-2xl px-4 py-8">
         <slot />
       </article>
-      <footer></footer>
+      <Footer />
+      <NavigationMobile />
     </main>
     <script src="../js/app.js"></script>
   </body>

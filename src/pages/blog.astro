@@ -19,7 +19,7 @@ const blogEntries = await getCollection("blog", ({ data }) => {
   </p>
 
   <h2 id="article">Die neusten Artikel</h2>
-  <div class="grid grid-cols-4 gap-4 mb-8">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
     {
       blogEntries
         .sort(sortByDate)

@@ -24,7 +24,7 @@
   }
 
   h1 + p {
-    @apply first-letter:text-6xl first-letter:font-bold;
+    @apply first-letter:text-4xl md:first-letter:text-6xl first-letter:font-bold;
   }
 
   pre {
@@ -36,11 +36,11 @@
   }
 
   #toc > ul {
-    @apply border-2 border-dark dark:border-light rounded-xl my-8 py-2 px-4 text-lg md:text-xl;
+    @apply border-2 border-dark dark:border-light rounded-xl my-8 py-2 px-4 text-base md:text-xl;
   }
 
   #toc li {
-    @apply my-2 list-disc;
+    @apply my-2 mx-4 list-disc;
   }
 
   p > a,
@@ -50,9 +50,5 @@
 
   p > code {
     @apply bg-blue-700 dark:bg-green-400 text-light dark:text-dark rounded-lg px-2 whitespace-nowrap;
-  }
-
-  li {
-    @apply my-2 mx-4;
   }
 }

@@ -7,8 +7,8 @@ import devguy from "../images/developer-guy.png";
 ---
 
 <Layout title="Startseite" description="Das ist meine Startseite">
-  <div class="flex flex-row justify-between items-center">
-    <div class="w-1/2 flex justify-center items-center py-10">
+  <div class="flex flex-col xl:flex-row justify-between items-center">
+    <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center py-10">
       <Image
         src={devguy}
         width={1200}
@@ -18,8 +18,10 @@ import devguy from "../images/developer-guy.png";
         alt="Das bin ich"
       />
     </div>
-    <div class="w-1/2 flex flex-col justify-between items-start">
-      <div class="text-6xl mb-4">
+    <div
+      class="w-full xl:w-1/2 flex flex-col justify-between items-center xl:items-start"
+    >
+      <div class="text-4xl md:text-6xl text-center xl:text-start mb-4">
         Visionen mit<br />
         Code und <span
           id="dynamic-header-text"
@@ -27,7 +29,7 @@ import devguy from "../images/developer-guy.png";
         ><br />
         zum Leben erwecken
       </div>
-      <div class="mb-6 leading-relaxed">
+      <div class="mb-6 text-center xl:text-start leading-relaxed">
         Du wolltest schon immer wissen wie du eine Website programmierst? Ich
         zeige dir in zahlreichen Tutorials wie du das mit HTML, CSS und
         JavaScript am besten machst.

@@ -1,0 +1,15 @@
+---
+import NavigationLinks from "../components/NavigationLinks.astro";
+import NavigationSocialBar from "../components/NavigationSocialBar.astro";
+---
+
+<header
+  class="flex items-center justify-end md:justify-between px-4 py-4 md:py-8 font-medium"
+>
+  <nav class="hidden md:flex items-center justify-center gap-x-8 text-2xl">
+    <NavigationLinks />
+  </nav>
+  <nav class="flex items-center justify-center gap-x-5">
+    <NavigationSocialBar />
+  </nav>
+</header>

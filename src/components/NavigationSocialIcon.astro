@@ -12,7 +12,7 @@ export interface Props {
 const { title, icon, url, target = "_blank", css } = Astro.props;
 ---
 
-<a href={url} target={target} class="relative group">
+<a href={url} target={target} class="hidden md:block relative group">
   <Icon
     name={icon}
     title={title}
