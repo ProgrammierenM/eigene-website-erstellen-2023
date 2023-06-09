@@ -1,3 +1,8 @@
+import Swup from "swup";
+import SwupScrollPlugin from "@swup/scroll-plugin";
+import SwupHeadPlugin from "@swup/head-plugin";
+import SwupA11yPlugin from "@swup/a11y-plugin";
+
 // pageHandler ist die Klasse, die alle Funktionen enthält, die auf der Seite ausgeführt werden sollen.
 class PageHandler {
   // der Konstruktor wird beim Erstellen einer neuen Instanz der Klasse ausgeführt.
@@ -34,11 +39,11 @@ class PageHandler {
 
     if (localStorage.getItem("theme") == "dark") {
       colorSwitch.innerHTML = `
-        <img src="/icons/sun.svg" alt="sun" class="w-6 h-6" />
+        <img src="/icons/sun.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
       `;
     } else {
       colorSwitch.innerHTML = `
-        <img src="/icons/moon.svg" alt="sun" class="w-6 h-6" />
+        <img src="/icons/moon.svg?a=${Math.random()}" alt="sun" class="w-6 h-6" />
       `;
     }
   }
@@ -99,3 +104,11 @@ const init = () => {
 
 // Die Funktion init() wird ausgeführt, wenn der DOM geladen wurde.
 document.addEventListener("DOMContentLoaded", () => init());
+
+// Swup Page Transition
+const swup = new Swup({
+  animationSelector: '[class*="swuptransition-"]',
+  plugins: [new SwupA11yPlugin(), new SwupHeadPlugin(), new SwupScrollPlugin()],
+});
+
+swup.on("contentReplaced", init);

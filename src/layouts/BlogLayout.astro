@@ -19,9 +19,12 @@ const { title, description, keywords, author } = Astro.props.frontmatter;
     <title>{title}</title>
   </head>
   <body class="font-mono bg-light dark:bg-dark text-dark dark:text-light">
-    <main class="relative md:container md:mx-auto w-full min-h-screen">
+    <main
+      id="swup"
+      class="relative md:container md:mx-auto w-full min-h-screen"
+    >
       <Header />
-      <article class="text-lg md:text-2xl px-4 py-8">
+      <article class="swuptransition-fade text-lg md:text-2xl px-4 py-8">
         <slot />
       </article>
       <Footer />

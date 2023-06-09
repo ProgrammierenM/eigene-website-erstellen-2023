@@ -52,3 +52,14 @@
     @apply bg-blue-700 dark:bg-green-400 text-light dark:text-dark rounded-lg px-2 whitespace-nowrap;
   }
 }
+
+.swuptransition-fade {
+  transition: 0.4s;
+  opacity: 1;
+  transform: none;
+}
+
+html.is-animating .swuptransition-fade {
+  opacity: 0;
+  transform: translateY(20px);
+}

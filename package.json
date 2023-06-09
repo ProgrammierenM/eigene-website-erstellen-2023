@@ -13,8 +13,12 @@
     "@astrojs/image": "^0.16.7",
     "@astrojs/mdx": "^0.19.4",
     "@astrojs/tailwind": "^3.1.1",
+    "@swup/a11y-plugin": "^3.0.0",
+    "@swup/head-plugin": "^1.3.0",
+    "@swup/scroll-plugin": "^2.0.2",
     "astro": "^2.3.0",
     "astro-icon": "^0.8.0",
+    "swup": "^3.0.8",
     "tailwindcss": "^3.3.1"
   }
 }
